@@ -1,0 +1,12 @@
+h1 {
+     color: yellow;
+}
+
+div {
+     border: 8px solid;
+     padding: 15 px;
+     margin: 15 px;
+     background-color: blue;
+     display: block;
+
+}
