@@ -11,6 +11,7 @@ router.get('/', (_,res) => {
     });
 });
 
-Profile.collection.insertOne({ name: 'Mary Jane', age: 45 });
+Profile.collection.deleteOne({ name: 'Mary Jane', age: 21 });
+Profile.collection.insertOne({ name: 'Mary Jane', age: 21 });
 
 module.exports = router;
