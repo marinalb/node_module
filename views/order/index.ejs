@@ -5,11 +5,19 @@
   <meta charset="UTF=8" />
   <link href= "./stylesheets/style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
   <div>
 <h1>Orders here!</h1>
 </div>
-</body>
+    <ul>
+      <% orders.map((order) => { %>
+        <li>Order <%= order.client.name %> <%= order.client.lastName %></li>
+        <%= order.total %>
+        <%= order.paid %>
+        
+        <% }) %>
+    </ul>
+
+  </body>
 </html>
 

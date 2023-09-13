@@ -2,8 +2,9 @@ const express = require('express');
 const path = require('path');
 
 const mainRoute = require('./routes/main');
-const orderRoute = require('./routes/order');
-const profileRoute = require ('./routes/profile');
+const orderRoute = require('./routes/orders');
+const profileRoute = require ('./routes/profiles');
+const { connect } = require('./models');
 
 const app = express();
 const porta = 3000;
@@ -20,7 +21,7 @@ app.use('/', mainRoute);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(porta, ()=> {
-        console.log('Subindo server');
-
+        connect();
+        console.log('Server up');
 
 });
